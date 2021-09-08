@@ -8,7 +8,7 @@ CC = gcc                        # compiler to use
 
 LINKERFLAG = -lm
 
-SRCS := helloworld.cpp
+SRCS := main.cpp
 BINS := Hello
 
 all: hello
@@ -17,9 +17,9 @@ hello: hello.o
         @echo "Checking.."
         gcc -lm hello.o -o Hello
 
-hello.o: Helloworld.cpp
+hello.o: main.cpp
         @echo "Creating object.."
-        gcc -c Helloworld.cpp
+        gcc -c main.cpp
 
 clean:
         @echo "Cleaning up..."
