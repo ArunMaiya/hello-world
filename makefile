@@ -4,7 +4,7 @@
 
 .PHONY = all clean
 
-CC = gcc                        # compiler to use
+CC = gcc                       
 
 LINKERFLAG = -lm
 
