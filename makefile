@@ -14,13 +14,13 @@ BINS := Hello
 all: hello
 
 hello: hello.o
-@echo "Checking.."
-gcc -lm hello.o -o Hello
+	@echo "Checking.."
+	gcc -lm hello.o -o Hello
 
 hello.o: main.cpp
-@echo "Creating object.."
-gcc -c main.cpp
+	@echo "Creating object.."
+	gcc -c main.cpp
 
 clean:
- @echo "Cleaning up..."
- rm -rvf hello.o Hello
+	@echo "Cleaning up..."
+	rm -rvf hello.o Hello
