@@ -4,8 +4,8 @@
 
 .PHONY = all clean
 
-CC = gcc                       
-
+CC = g++                       
+FLAGS = -Wall -Wextra -Werror
 LINKERFLAG = -lm
 
 SRCS := main.cpp
@@ -15,11 +15,11 @@ all: hello
 
 hello: hello.o
 	@echo "Checking.."
-	gcc main.o -o Hello
+	$(CC) -lm main.o -o Hello
 
 hello.o: main.cpp
 	@echo "Creating object.."
-	gcc -c main.cpp
+	$(CC) $(FLAGS) -c main.cpp
 
 clean:
 	@echo "Cleaning up..."
