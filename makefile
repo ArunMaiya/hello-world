@@ -15,7 +15,7 @@ all: hello
 
 hello: hello.o
 	@echo "Checking.."
-	gcc -lm main.o -o Hello
+	gcc main.o -o Hello
 
 hello.o: main.cpp
 	@echo "Creating object.."
@@ -23,4 +23,4 @@ hello.o: main.cpp
 
 clean:
 	@echo "Cleaning up..."
-	rm -rvf hello.o Hello
+	rm -rvf main.o Hello
